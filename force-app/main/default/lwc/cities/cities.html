@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Select a City">
+        <div class="slds-m-around_medium">
+            <lightning-combobox name="city" label="City" value={selectedCity} placeholder="Select a city"
+                options={cityOptions} onchange={handleCityChange}>
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+</template>
