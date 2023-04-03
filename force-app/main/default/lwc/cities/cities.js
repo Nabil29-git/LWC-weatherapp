@@ -18,9 +18,7 @@ export default class MyComponent extends LightningElement {
     @wire(getCities)
     wiredCities({ error, data }) {
         if (data) {
-            this.options = data.map(city => {
-                return { label: city, value: city };
-            });
+            this.options = data.map(city => ({ label: city, value: city }))
         } else if (error) {
             console.error(error);
         }
